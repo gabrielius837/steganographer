@@ -22,10 +22,12 @@ func main() {
 	}
 	defer file.Close()
 
-	if !steganographer.HasPngHeader(file) {
-		fmt.Fprintf(os.Stderr, "%s does not have valid png header", file.Name())
-		os.Exit(1)
-	}
+	/*
+		if !steganographer.HasPngHeader(file) {
+			fmt.Fprintf(os.Stderr, "%s does not have valid png header", file.Name())
+			os.Exit(1)
+		}
+	*/
 
 	lastChunk := false
 	for !lastChunk {
